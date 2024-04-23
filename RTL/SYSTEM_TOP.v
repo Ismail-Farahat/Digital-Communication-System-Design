@@ -78,55 +78,12 @@ module SYSTEM_TOP #(
 
 
 
-
     assign PAR_EN   = UART_CONFIG[0];
     assign PAR_TYP  = UART_CONFIG[1];
     assign PRESCALE = UART_CONFIG[7:2];
 
 
-    //================================================================//
-    //======================    DEBUG & OPTIMIZATION    ==============//
-    //================================================================//
-    /*
-    integer     log_file;
-    initial begin
-        log_file = $fopen("./test.log", "w");
-    end
-
-    always @(   CTRL_U0.FSM_U.state, 
-                RX_P_DATA, RX_D_VLD, SYNC_RX_P_DATA, SYNC_RX_D_VLD,
-                address, 
-                RdEn, RdData, RdData_valid, WrEN, WrData,
-                ALU_EN, ALU_FUN, operand1, operand2, ALU_OUT, ALU_OUT_VLD,
-                TX_P_DATA, TX_D_VLD, SYNC_TX_P_DATA, SYNC_TX_D_VLD,
-                TX_BUSY, SYNC_TX_BUSY) 
-    begin
-        $fwrite(log_file,   "========================================================\n");
-        $fwrite(log_file,   "@TIME = %d\n--> STATE= %h\nREF_CLK= %d,   UART_CLK= %d,   TX_CLK=%d\n",
-                             $time, CTRL_U0.FSM_U.state, REF_CLK, UART_CLK, TX_CLK);
-        $fwrite(log_file,   "RX-: D= %h, VLD= %b, SYNC_D= %h, SYNC_VLD= %b\n",
-                            RX_P_DATA, RX_D_VLD, SYNC_RX_P_DATA, SYNC_RX_D_VLD);
-        $fwrite(log_file,   "ADR: Address= %h\n",
-                            address);
-        $fwrite(log_file,   "RE-: RdEn= %h, D= %h, VLD= %b\n", 
-                            RdEn, RdData, RdData_valid);
-        $fwrite(log_file,   "Wr-: WrEn= %b, D= %h\n",
-                            WrEN, WrData);
-        $fwrite(log_file,   "ALU: ALU_En= %b, F= %h, OP1= %h, OP2= %h, R= %h, VLD= %b\n",
-                            ALU_EN, ALU_FUN, operand1, operand2, ALU_OUT, ALU_OUT_VLD);
-        $fwrite(log_file,   "TX-: D= %h, VLD= %b, SYNC_D= %h, SYNC_VLD= %b\n",
-                            TX_P_DATA, TX_D_VLD, SYNC_TX_P_DATA, SYNC_TX_D_VLD);
-        $fwrite(log_file,   "TX-: BUSY= %b, SYNC_BUSY= %b\n",
-                            TX_BUSY, SYNC_TX_BUSY);
-    end
-    */
-    //================================================================//
-    //================================================================//
-    //================================================================//
-
-
-
-
+    
     //================================================================//
     //======================    REG FILE    ==========================//
     //================================================================//
