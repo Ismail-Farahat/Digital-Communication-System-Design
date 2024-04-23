@@ -13,3 +13,9 @@
 ## Testbanch
 * UART testbech
 * System Top Module testbench
+
+## Waveform
+* Sending two commands to the system that receiving them through UART-RX and then transmiting the result through the UART-TX
+* First Command: divide two numbers ('h08 and 'h02) **[Command: 'CC_08_02_03]**
+* Second Command: Multiply two numbers ('h04 and 'h03) **[command: 'CC_04_03_02]**
+![waveform](https://github.com/Ismail-Farahat/Digital-Communication-System-Design/assets/68667962/0aea12d1-afb0-4fdc-8afa-b1041364328b)
